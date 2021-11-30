@@ -72,3 +72,46 @@ footer  {
     cursor: pointer;
     margin-bottom: 20px;
 }
+
+/* Animation */
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: #f00;
+    margin: 20px auto;
+}
+
+.slide-in {
+    animation-name: slideIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+.slide-out {
+    animation-name: slideOut;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(1000px);
+    }
+
+    to {
+        transform: translate(0px);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translate(-1000px);
+    }
+}
